@@ -53,7 +53,7 @@
       log("key: " + key);
       if(key && key.trim() != "") {
         log("added key " + key);
-        window.authorizations.add("key", new ApiKeyAuthorization("api_key", key, "query"));
+        window.authorizations.add("key", new ApiKeyAuthorization("X-Anydo-Auth", key, "header"));
       }
     })
     window.swaggerUi.load();
